@@ -1,0 +1,205 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: white;
+}
+#result {
+  margin-top: 20px;
+}
+pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+#submit-button {
+  color: #aac8e4;
+  background-color: #2f2f2f;
+  border-radius: 6px;
+  padding: 10px 55px;
+  border: 1px solid #2f2f2f;
+}
+
+#submit-button:hover {
+  background-color: #aac8e4;
+  color: #2f2f2f;
+  cursor: pointer;
+}
+
+.title {
+  text-align: center;
+}
+
+.inputs {
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+  text-align: right;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+input {
+  border: 1px solid #ddd;
+  background-color: #2f2f2f;
+  color: white;
+  padding: 5px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+/* style div and headers */
+.chart,
+h2 {
+  text-align: center;
+  color: white;
+  background: transparent;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.toolbox span {
+  padding: 5px;
+}
+
+svg {
+  padding: 10px;
+  width: 500px;
+  height: 300px;
+}
+
+.chart {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.chart-card {
+  border-width: 1px;
+  border-color: #aac8e4;
+  border-style: solid;
+  border-radius: 4px;
+  width: 560px;
+  margin: 10px;
+  background-color: #1c1b23;
+}
+
+/* style of bar charts */
+.bar-chart rect {
+  fill: rgb(79, 175, 211);
+}
+
+.bar-chart .hovered {
+  fill: #979696;
+}
+
+/* style of line charts */
+.line-chart {
+  stroke: rgb(79, 175, 211);
+  stroke-width: 2;
+  fill: none;
+}
+
+/* style of area charts */
+.area-chart {
+  fill: rgb(79, 175, 211);
+}
+
+/* style of scatter plot */
+.scatter-plot circle {
+  fill: rgb(79, 175, 211);
+}
+
+.scatter-plot .hovered {
+  fill: #979696;
+}
+
+.chart.section {
+  display: none;
+}
+
+.loading.icon {
+  display: none;
+}
+
+.x-axis path,
+.x-axis .tick line {
+  stroke: white;
+}
+
+.y-axis path,
+.y-axis .tick line {
+  stroke: white;
+}
+
+.x-axis .tick text {
+  fill: white;
+}
+
+.y-axis .tick text {
+  fill: white;
+}
+
+.scaled {
+  stroke-width: 2px; /* Change stroke width on hover */
+  transition: transform 0.2s;
+}
+
+#CalendarHeatmap-div {
+  display: flex;
+  flex-direction: column;
+}
+#Activity-title-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#Activity-title-p {
+  padding-right: 10px;
+}
+#Activity-desc-p {
+  font-size: 14px;
+  color: #c4c4c4;
+}
+
+#matchCount {
+  background-color: #2f2f2f;
+  border-radius: 6px;
+  padding: 0px 25px;
+  border: 1px solid #2f2f2f;
+  color: white;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.tooltip div {
+  padding: 1px;
+  margin: none;
+}
+
+.matchSelect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.chart-style {
+  border-width: 2px;
+  border-color: #ffffff;
+  border-style: solid;
+  width: 560px;
+  margin: 10px;
+}
+
+.radar-visible {
+  opacity: 1;
+}

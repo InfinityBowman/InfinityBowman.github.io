@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>League of Legends Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- d3 script -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- New code below -->
+  </head>
+  <body>
+    <h3>CS-5630 / CS-6630 Project Milestone</h3>
+    <address>
+      <span>Zach Sealy</span>
+      <span>u1371543@utah.edu</span>
+      <span>u1371543</span>
+    </address>
+    <address>
+      <span>Jacob Maynard</span>
+      <span>u1350370@utah.edu</span>
+      <span>u1350370</span>
+    </address>
+    <br />
+    <hr />
+    <br />
+
+    <!-- New stuff here -->
+    <h1 class="title">League of Legends Dashboard</h1>
+    <div class="inputs">
+      <div class="row">
+        <form id="riotForm">
+          <label for="summonerName">Summoner Name:</label>
+          <input type="text" id="summonerName" name="summonerName" value="InfinityBowman1" required />
+          <br />
+          <label for="tagLine">Tagline:</label>
+          <input type="text" id="tagLine" name="tagLine" value="NA1" required />
+          <br />
+          <button type="submit" id="submit-button">Submit</button>
+          <br />
+        </form>
+        <div class="matchSelect">
+          <select id="matchCount" name="matchCount" required>
+            <option value="10">Last 10 Games</option>
+            <option value="20">Last 20 Games</option>
+            <option value="30">Last 30 Games</option>
+            <option value="40">Last 40 Games</option>
+            <option value="50">Last 50 Games</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="result"></div>
+    </div>
+
+    <div class="chart section">
+      <div class="row chart">
+        <div class="chart"></div>
+      </div>
+
+      <div>
+        <label for="matchSelect">Highlight Match</label>
+        <select id="matchSelect" style="border-radius: 4px; height: 50px; background-color: #2f2f2f; color: white">
+          <!-- Options will be populated here -->
+        </select>
+      </div>
+
+      <div class="row chart">
+        <div class="chart">
+          <div id="Barchart-div" class="chart-card"><h2>Champions Played</h2></div>
+          <div id="CalendarHeatmap-div" class="chart-card">
+            <div id="Activity-title-div">
+              <h2 id="Activity-title-p">Recent Activity</h2>
+              <p id="Activity-desc-p">Last 90 Days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row chart">
+        <div class="chart">
+          <div id="Linechart-div" class="chart-card"><h2>Gold / Minute</h2></div>
+          <div id="DualBarChart-div" class="chart-card">
+            <h2>Opponent Comparison</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row chart">
+        <div class="chart">
+          <div id="Scatterplot-div" class="chart-card"><h2>Deaths to Kills</h2></div>
+          <div id="RadarChart-div" class="chart-card"><h2>Average Opponent Comparison</h2></div>
+        </div>
+      </div>
+
+      <div class="row chart">
+        <div class="chart">
+          <div id="TreeChart-div" class="chart-card"><h2>Tree</h2></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="loading icon">
+      <h2>Loading...</h2>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
